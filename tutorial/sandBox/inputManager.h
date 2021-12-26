@@ -36,7 +36,6 @@ static void glfw_mouse_press(GLFWwindow* window, int button, int action, int mod
 		  }
 	  } 
 	  if (found) {
-		  std::cout << "i am here" << std::endl;
 		  scn->rotateScene = false;
 		  scn->selected_data_index = savedIndx;
 		  scn->data().set_colors(Eigen::RowVector3d(0.9, 0.1, 0.1));
@@ -47,6 +46,8 @@ static void glfw_mouse_press(GLFWwindow* window, int button, int action, int mod
 	  }
 	  else {
 		  scn->rotateScene = true;
+		  scn->data_list[lastIndx].set_colors(Eigen::RowVector3d(255.0 / 255.0, 228.0 / 255.0, 58.0 / 255.0));
+
 	  }
   }
   else {
