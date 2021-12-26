@@ -1,0 +1,6 @@
+C:/Users/sabin/Downloads/EngineForAnimationCourse/tutorial/data/sphere.obj
+C:/Users/sabin/Downloads/EngineForAnimationCourse/tutorial/data/zcylinder.obj
+
+
+
+
