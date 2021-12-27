@@ -226,16 +226,7 @@ void SandBox::ikCyclicCoordinateDecentMethod(){
 	}
 
 }
-/*
-Input:
-joint positions Pi for i=1,...n
-position of target, t
-and distances between each join we will call this array di
 
-di = |Pi+1 - Pi| for i = 1, ... n, n-1
-
-Output - new joint positions Pi
-*/
 
 
 
@@ -246,11 +237,6 @@ Eigen::Vector3d SandBox::ikGetPosition(int id, double length){
 	return r;
 } 
 
-/*
-(*) ->firstLinkID
-(*)
-(*)
-*/
 void SandBox::ikFabrik() {
 	if (shouldAnimateFabrik) {
 		std::vector<Eigen::Vector3d> p; //joint positions
