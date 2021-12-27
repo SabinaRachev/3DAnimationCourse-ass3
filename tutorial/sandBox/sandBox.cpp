@@ -38,7 +38,6 @@ void SandBox::Init(const std::string &config)
 			data().point_size = 10;
 			data().line_width = 2;
 			data().set_visible(false, 1);
-		//	data().SetCenterOfRotation(Eigen::Vector3d(0, 0, 0));
 
 			
 		}
@@ -139,10 +138,6 @@ void SandBox::make_zaxis(int id){
 	
 }
 void SandBox::addAxisToObject(int id) {
-
-
-	//Eigen::MatrixXd centerOfAxis= data_list[id].V.colwise().mean();
-
 	float lengthOfAxis = data_list[id].V.colwise().maxCoeff()[2] - data_list[id].V.colwise().minCoeff()[2];
 
 	Eigen::Vector3d m = data().V.colwise().minCoeff();
