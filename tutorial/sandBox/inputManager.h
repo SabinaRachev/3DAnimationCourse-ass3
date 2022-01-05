@@ -240,7 +240,7 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			break;
 		case GLFW_KEY_LEFT:
 			if (!scn->rotateScene)
-				scn->data(scn->selected_data_index).MyRotate(Eigen::Vector3d(0, 0, 1), -0.05);
+				scn->data(scn->selected_data_index).RotateInSystem(scn->data(scn->selected_data_index).MakeTransd(),Eigen::Vector3d(0, 0, 1), -0.05);
 
 			else
 				scn->MyRotate(Eigen::Vector3d(0, 0, 1), -0.05);
@@ -250,7 +250,8 @@ static void glfw_key_callback(GLFWwindow* window, int key, int scancode, int act
 			break;
 		case GLFW_KEY_RIGHT:
 			if (!scn->rotateScene)
-				scn->data(scn->selected_data_index).MyRotate(Eigen::Vector3d(0, 0, 1), 0.05);
+				scn->data(scn->selected_data_index).RotateInSystem(scn->data(scn->selected_data_index).MakeTransd()
+					, Eigen::Vector3d(0, 0, 1), 0.05);
 			else
 				scn->MyRotate(Eigen::Vector3d(0, 0, 1), 0.05);
 			//scn->direction = Eigen::Vector3d(0.005, 0, 0);
